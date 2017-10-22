@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <HBox layoutX="200.0" layoutY="150.0">
+         <children>
+            <TextField fx:id="get1" prefHeight="25.0" prefWidth="95.0" promptText="sum" text="100" />
+            <Button mnemonicParsing="false" onAction="#getthiscash" prefHeight="25.0" prefWidth="124.0" text="get this sum" textFill="#102f0e" />
+         </children>
+      </HBox>
+   </children>
+</Pane>
