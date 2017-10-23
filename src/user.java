@@ -5,7 +5,7 @@ import java.sql.*;
  */
 public class user {
 
-    public  int cash;
+    private  int cash;
     private int pin;
 
 

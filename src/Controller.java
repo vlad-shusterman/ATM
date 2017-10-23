@@ -71,18 +71,18 @@ public class Controller extends Main {
     public void getthiscash(ActionEvent actionEvent) throws CloneNotSupportedException {
         Alert alert1 = new Alert(Alert.AlertType.ERROR);
         alert1.setContentText("incorrect sum. please try again");
-        if (valueOf(get1.getText())>user1.cash){
+        if (valueOf(get1.getText())>user1.getfromdatabasecash(id)){
             Alert alert12 = new Alert(Alert.AlertType.ERROR);
             alert12.setContentText("U have no enough money");
             alert12.showAndWait();
         } else {
-        if (valueOf(get1.getText())<0 || get1.getText().equals("")) alert1.showAndWait();
-         else {
-            screen1.updatebalance(id,screen1.getCash(user1.getfromdatabasecash(id),valueOf(get1.getText())));
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("operation done successfully");
-            alert.showAndWait();
-            stage2.close();
+            if (valueOf(get1.getText()) < 0 || get1.getText().equals("")) alert1.showAndWait();
+            else {
+                screen1.updatebalance(id, screen1.getCash(user1.getfromdatabasecash(id), valueOf(get1.getText())));
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("operation done successfully");
+                alert.showAndWait();
+                stage2.close();
             }
         }
     }
@@ -90,7 +90,7 @@ public class Controller extends Main {
     public void sentmoney(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText("Please, input ID and SUM");
-        if (valueOf(sent2.getText())>user1.cash){
+        if (valueOf(sent2.getText())>user1.getfromdatabasecash(id)){
             Alert alert12 = new Alert(Alert.AlertType.ERROR);
             alert12.setContentText("U have no enough money");
             alert12.showAndWait();
