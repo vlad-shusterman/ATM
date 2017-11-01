@@ -2,9 +2,9 @@ import java.sql.*;
 
 abstract class JDBC {
 
-    public static  final String url = "jdbc:mysql://localhost:3306/atm";
-    public static String user = "root";
-    public static String password = "Alex121269";
+    public static String url ;
+    public static String user ;
+    public static String password;
     public static Connection con;
     public static Statement stmt;
     public static ResultSet rs;
